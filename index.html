@@ -24,7 +24,7 @@
     </div>
     <div class="main">
         <div class="hamburger">
-            <img class="ham" src="/ham.jpg" alt="" width="29px">
+            <img class="ham" src="PORTFOLO/ham.jpg" alt="" width="29px">
             <img class="cross" src="myImages/cross.png" alt="" width="29px">
         </div>
        <div class="infoContainer">
@@ -108,8 +108,21 @@
 </div>
     </div>
 </body>
-<script src="/script.js">
-
+<script>
+document.querySelector('.cross').style.display="none";
+document.querySelector('.hamburger').addEventListener('click',()=>{
+    document.querySelector('.sidebar').classList.toggle("sidebargo"); 
+    if(document.querySelector('.sidebar').classList.contains("sidebargo")){
+        document.querySelector('.ham').style.display="inline";
+        document.querySelector('.cross').style.display="none";
+    }
+    else{
+        setTimeout(() => {
+        document.querySelector('.cross').style.display="inline";
+    }, 500);
+        document.querySelector('.ham').style.display="none";
+    }
+});
 </script>
 
 </html>
